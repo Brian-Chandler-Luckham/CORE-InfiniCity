@@ -8,5 +8,9 @@ Assets {
       VirtualFolderPath: "RoadConfigs"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "ParkAssets"
+      PlatformAssetType: 5
+    }
   }
 }

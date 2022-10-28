@@ -17,9 +17,12 @@ local RC_3_ACD = script:GetCustomProperty("RC_3ACD")
 local RC_3_BCD = script:GetCustomProperty("RC_3BCD")
 local RC_4_ABCD = script:GetCustomProperty("RC_4ABCD")
 local _RND_UTILS = require(script:GetCustomProperty("_RndUtils"))
+local PARK_TILE = script:GetCustomProperty("ParkTile")
+
 
 -- ABCD - 1 2 4 8
 local configMap = {
+  [0 ] = PARK_TILE,
   [1 ] = RC_1_A,
   [2 ] = RC_1_B,
   [3 ] = RC_2_AB,

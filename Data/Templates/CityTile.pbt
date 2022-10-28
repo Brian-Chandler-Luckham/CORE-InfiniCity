@@ -7,7 +7,7 @@ Assets {
       RootId: 8616785130511928807
       Objects {
         Id: 8616785130511928807
-        Name: "RoadTile"
+        Name: "CityTile"
         Transform {
           Scale {
             X: 1
@@ -151,6 +151,12 @@ Assets {
             Name: "cs:_RndUtils"
             AssetReference {
               Id: 1308646135617733748
+            }
+          }
+          Overrides {
+            Name: "cs:ParkTile"
+            AssetReference {
+              Id: 2517665887077461614
             }
           }
           Overrides {
