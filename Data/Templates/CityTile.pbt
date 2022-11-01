@@ -160,6 +160,12 @@ Assets {
             }
           }
           Overrides {
+            Name: "cs:CenterTile"
+            AssetReference {
+              Id: 1670243404529855507
+            }
+          }
+          Overrides {
             Name: "cs:RC_1A:category"
             String: "RoadPresets"
           }

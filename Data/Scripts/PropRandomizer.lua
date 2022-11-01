@@ -1,6 +1,12 @@
 local allProperties = script:GetCustomProperties()
 local root = script.parent
 
+root.visibility = Visibility.FORCE_OFF
+root.collision = Collision.FORCE_OFF
+
+Task.Wait(math.random() * 3) -- Soften the spike of loading.
+
+
 local propList = {}
 for k,v in pairs(allProperties) do
   table.insert(propList, v)
@@ -37,6 +43,5 @@ local prop = World.SpawnAsset(propId, {
   rotation = Rotation.New(0, 0, rs:GetNumber(0, 360)),
 })
 
-root.visibility = Visibility.FORCE_OFF
 prop.visibility = Visibility.FORCE_ON
 

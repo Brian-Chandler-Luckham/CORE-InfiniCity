@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6918357713610658931
+        ParentId: 2030093287295387124
         ChildIds: 14671170618381865730
         ChildIds: 11921095902259116014
         ChildIds: 5710610685565591513
@@ -29,6 +29,7 @@ Assets {
         ChildIds: 14236349025599598145
         ChildIds: 13837189218105870708
         ChildIds: 11851487548629714486
+        ChildIds: 10867622106072560355
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4481,6 +4482,58 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 10867622106072560355
+        Name: "Collision"
+        Transform {
+          Location {
+            Z: 90
+          }
+          Rotation {
+          }
+          Scale {
+            X: 7.00000048
+            Y: 7.00000048
+            Z: 5
+          }
+        }
+        ParentId: 17163521590341317136
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8760343567357180133
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
     }
     Assets {
       Id: 452440757692005802
@@ -4615,6 +4668,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_water_jet"
+      }
+    }
+    Assets {
+      Id: 8760343567357180133
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
       }
     }
     PrimaryAssetId {
