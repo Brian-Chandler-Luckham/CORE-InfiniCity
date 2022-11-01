@@ -4,7 +4,6 @@ local root = script.parent
 root.visibility = Visibility.FORCE_OFF
 root.collision = Collision.FORCE_OFF
 
-Task.Wait(math.random() * 3) -- Soften the spike of loading.
 
 
 local propList = {}
@@ -27,21 +26,25 @@ function RndMap(x, y, seed)
 end
 
 
+Task.Spawn(function()
+  Task.Wait(math.random() * 3) -- Soften the spike of loading.
+  if not Object.IsValid(script) then return end
 
-local pos = root:GetWorldPosition()
-local seed = RndMap(pos.x // 72, pos.y // 17, 66176)
---print(seed)
-local rs = RandomStream.New(seed)
 
-local propId = propList[rs:GetInteger(1, #propList)]
-local scaleVariation = rs:GetNumber(0.75, 1.25)
---print(propId)
+  local pos = root:GetWorldPosition()
+  local seed = RndMap(pos.x // 72, pos.y // 17, 66176)
+  --print(seed)
+  local rs = RandomStream.New(seed)
 
-local prop = World.SpawnAsset(propId, {
-  parent = root,
-  scale = Vector3.ONE * scaleVariation,
-  rotation = Rotation.New(0, 0, rs:GetNumber(0, 360)),
-})
+  local propId = propList[rs:GetInteger(1, #propList)]
+  local scaleVariation = rs:GetNumber(0.75, 1.25)
+  --print(propId)
 
-prop.visibility = Visibility.FORCE_ON
+  local prop = World.SpawnAsset(propId, {
+    parent = root,
+    scale = Vector3.ONE * scaleVariation,
+    rotation = Rotation.New(0, 0, rs:GetNumber(0, 360)),
+  })
 
+  prop.visibility = Visibility.FORCE_ON
+end)

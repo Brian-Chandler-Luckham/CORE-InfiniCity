@@ -58,6 +58,30 @@ Assets {
         ParentId: 8616785130511928807
         UnregisteredParameters {
           Overrides {
+            Name: "cs:RiverTileNoBridge"
+            AssetReference {
+              Id: 6831969466892655110
+            }
+          }
+          Overrides {
+            Name: "cs:RiverTileBridge"
+            AssetReference {
+              Id: 8614796715780837095
+            }
+          }
+          Overrides {
+            Name: "cs:ParkTile"
+            AssetReference {
+              Id: 2517665887077461614
+            }
+          }
+          Overrides {
+            Name: "cs:CenterTile"
+            AssetReference {
+              Id: 1670243404529855507
+            }
+          }
+          Overrides {
             Name: "cs:RC_1A"
             AssetReference {
               Id: 16157339439371564441
@@ -154,15 +178,9 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:ParkTile"
-            AssetReference {
-              Id: 2517665887077461614
-            }
-          }
-          Overrides {
-            Name: "cs:CenterTile"
-            AssetReference {
-              Id: 1670243404529855507
+            Name: "cs:DefaultFloor"
+            ObjectReference {
+              SubObjectId: 10526031786845780385
             }
           }
           Overrides {
@@ -224,6 +242,22 @@ Assets {
           Overrides {
             Name: "cs:RC_4ABCD:category"
             String: "RoadPresets"
+          }
+          Overrides {
+            Name: "cs:RiverTileNoBridge:category"
+            String: "SpecialTiles"
+          }
+          Overrides {
+            Name: "cs:RiverTileBridge:category"
+            String: "SpecialTiles"
+          }
+          Overrides {
+            Name: "cs:ParkTile:category"
+            String: "SpecialTiles"
+          }
+          Overrides {
+            Name: "cs:CenterTile:category"
+            String: "SpecialTiles"
           }
         }
         Collidable_v2 {
